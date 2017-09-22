@@ -1,0 +1,17 @@
+<div class="container cars-page">
+	<div class="row cars-wrapper">
+		<div *ngFor='let car of cars' class="col-sm-3">
+			<div class="car">
+				<div class="image-thumb">
+					<a class="image-link" [routerLink]="['/info/', car._id]">
+						<img src="{{ car.image }}">
+					</a>
+				</div>
+				<a class="image-header" [routerLink]="['/info/', car._id]">
+					<h4>Brand: {{ car.brand }}</h4>
+					<h5>Model: {{ car.model }}</h5>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+.cars-wrapper {
+  margin-top: 30px;
+}
+.car {
+  margin-bottom: 30px;
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+  overflow: hidden;
+  .image {
+    &-thumb {
+      width: 100%;
+      height: 12em;
+    }
+    &-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      &:hover {
+        img {
+          transform: scale(1.1) rotate(2deg);
+        }
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .2s ease-in-out, rotate .4s ease-out;
+      }
+    }
+    &-header {
+      display: block;
+      padding: 10px 20px;
+      color: #000;
+      &:hover {
+        text-decoration: none;
+        h4 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
