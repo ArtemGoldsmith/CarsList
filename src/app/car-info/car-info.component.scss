@@ -1,0 +1,27 @@
+.car-info-wrapper {
+  margin-top: 30px;
+}
+.car {
+  margin-bottom: 30px;
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+  overflow: hidden;
+  .image-thumb {
+    img {
+      width: 100%;
+    }
+  }
+  .title {
+    text-transform: uppercase;
+    padding: 0 30px;
+  }
+  .description {
+    color: #636363;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+}

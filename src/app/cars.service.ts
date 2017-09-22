@@ -15,8 +15,27 @@ export class CarService {
   }
 
   getCar(id) {
-    return this._http.get(this._getUrl + id)
-      .map((response: Response) => response.json());
+    return new Promise((resolve, reject) => {
+      this._http.get(this._getUrl + id)
+        .map((response: Response) => response.json())
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
   }
+
+  // getCar(id) {
+  //   return new Promise((resolve, reject) => {
+  //     this._http.get(this._getUrl + id)
+  //       .map(res => res.json())
+  //       .subscribe(res => {
+  //         resolve(res);
+  //       }, (err) => {
+  //         reject(err);
+  //       });
+  //   });
+  // }
 
 }

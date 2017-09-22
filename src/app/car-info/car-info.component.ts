@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Car } from '../car';
 import { CarService } from '../cars.service';
 import { ActivatedRoute } from '@angular/router';
@@ -12,16 +12,21 @@ import { ActivatedRoute } from '@angular/router';
 
 export class CarInfoComponent implements OnInit {
 
-  car: Array<Car>;
+  public car: Object = {};
 
   constructor(private route: ActivatedRoute, private _carService: CarService) {}
 
   ngOnInit() {
     this.getCarDetail(this.route.snapshot.params['id']);
   }
+
   getCarDetail(id) {
-    this._carService.getCar(id)
-      .subscribe(resCarData => this.car = resCarData);
+    this._carService.getCar(id).then((res) => {
+      this.car = res;
+      console.log(this.car);
+    }, (err) => {
+      console.log(err);
+    });
   }
 }
 

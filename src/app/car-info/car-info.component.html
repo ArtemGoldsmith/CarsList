@@ -2,11 +2,19 @@
   <div class="row car-info-wrapper">
     <div class="col-sm-12">
       <div class="car">
-        <div class="image-thumb">
-          <img src="{{ car }}">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="image-thumb">
+              <img src="{{ car.image }}">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <h2 class="title">{{ car.brand }} {{ car.model }}</h2>
+            <div class="description">
+              {{ car.description }}
+            </div>
+          </div>
         </div>
-        <h4>Brand: {{ car.brand }}</h4>
-        <h5>Model: {{ car.model }}</h5>
       </div>
     </div>
   </div>
