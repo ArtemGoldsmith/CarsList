@@ -13,6 +13,14 @@
             <div class="description">
               {{ car.description }}
             </div>
+            <div class="additionals">
+              <h3>Запчасти</h3>
+              <ul>
+                <li *ngFor="let spare of car.spares">
+                  <span>{{ spare }}</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

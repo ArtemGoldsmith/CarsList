@@ -26,16 +26,4 @@ export class CarService {
     });
   }
 
-  // getCar(id) {
-  //   return new Promise((resolve, reject) => {
-  //     this._http.get(this._getUrl + id)
-  //       .map(res => res.json())
-  //       .subscribe(res => {
-  //         resolve(res);
-  //       }, (err) => {
-  //         reject(err);
-  //       });
-  //   });
-  // }
-
 }
